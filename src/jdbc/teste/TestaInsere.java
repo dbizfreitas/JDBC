@@ -28,16 +28,7 @@ public class TestaInsere {
         
                
         System.out.println("Gravado!");
-        
-        List<Contato>contatos = dao.getLista();
-        
-        for(Contato _contato : contatos){
-            System.out.println("Nome:"  + _contato.getNome());
-            System.out.println("Email:" + _contato.getEmail());
-            System.out.println("Endereco:" + _contato.getEndereco());
-            System.out.println("Data de Nascimento:" + _contato.getDataNascimento().getTime() + "\n");
-            
-        }
+               
         
     }
    
