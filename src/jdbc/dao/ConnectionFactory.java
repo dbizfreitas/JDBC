@@ -23,7 +23,7 @@ public class ConnectionFactory {
 
             return DriverManager.getConnection(
 
-                    "jdbc:derby:C:/Users/FACULDADE/Desktop/Nova pasta/CursoJavaSatc/Contatos", "user", "user");
+                    "jdbc:derby:C:/Users/FACULDADE/Desktop/Nova pasta/JDBC/Contatos", "user", "user");
 
         } catch (SQLException e) {
 
