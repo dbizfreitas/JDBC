@@ -5,6 +5,7 @@
 package jdbc.teste;
 
 import java.util.Calendar;
+import java.util.List;
 import jdbc.dao.ContatoDao;
 import jdbc.modelo.Contato;
 
@@ -14,6 +15,7 @@ import jdbc.modelo.Contato;
  */
 public class TestaInsere {
     public static void main(String[] args){
+      
         Contato contato = new Contato();
         contato.setNome("Willy Wonka");
         contato.setEmail("Willy@oomopaloompa.com");
@@ -24,7 +26,19 @@ public class TestaInsere {
         
         dao.adiciona(contato);
         
+               
         System.out.println("Gravado!");
+        
+        List<Contato>contatos = dao.getLista();
+        
+        for(Contato _contato : contatos){
+            System.out.println("Nome:"  + _contato.getNome());
+            System.out.println("Email:" + _contato.getEmail());
+            System.out.println("Endereco:" + _contato.getEndereco());
+            System.out.println("Data de Nascimento:" + _contato.getDataNascimento().getTime() + "\n");
+            
+        }
+        
     }
-    
+   
 }
